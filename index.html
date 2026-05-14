@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Tempahan Bilik</title>
+<title>eTempah JKR Perlis</title>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -98,12 +98,6 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#f5f5f0;color:#1a1a1a
 .ict-item:has(.ict-cb:checked){border-color:var(--c);background:var(--bg);color:var(--c);font-weight:600}
 .ict-item:hover:has(.ict-cb:not(:disabled)){border-color:#bbb}
 .ict-cb{width:14px;height:14px;cursor:pointer;accent-color:var(--c)}
-.platform-item{display:flex;align-items:center;gap:8px;padding:10px 12px;border:1.5px solid #e8e8e4;border-radius:10px;font-size:12px;font-weight:600;color:#444;cursor:pointer;transition:all 0.15s;background:#fff}
-.platform-item:has(.platform-radio:checked){border-color:var(--c);background:var(--bg);color:var(--c)}
-.platform-item:hover:has(.platform-radio:not(:disabled)){border-color:#bbb}
-.platform-radio{display:none}
-.platform-icon{font-size:16px}
-.platform-label{font-weight:600}
 .sub-btn{width:100%;padding:12px;border-radius:12px;border:none;font-size:13px;font-weight:700;font-family:inherit;cursor:pointer;color:#fff;background:var(--c);transition:all 0.2s;margin-top:4px}
 .sub-btn:hover:not(:disabled){opacity:0.87;transform:translateY(-1px)}
 .sub-btn:disabled{opacity:0.35;cursor:not-allowed;transform:none}
@@ -155,9 +149,9 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#f5f5f0;color:#1a1a1a
 .stat-num{font-size:26px;font-weight:800;color:#1a1a1a;line-height:1}
 .stat-label{font-size:11px;color:#aaa;font-weight:600;margin-top:3px}
 .admin-table-wrap{background:#fff;border:1.5px solid #e8e8e4;border-radius:18px;overflow:hidden}
-.admin-table{width:100%;border-collapse:collapse;font-size:12px}
-.admin-table th{text-align:left;padding:11px 14px;font-size:10px;font-weight:700;color:#aaa;text-transform:uppercase;letter-spacing:0.5px;background:#fafaf8;border-bottom:1px solid #f0f0ec;white-space:nowrap}
-.admin-table td{padding:11px 14px;border-bottom:1px solid #f8f8f6;color:#1a1a1a;vertical-align:middle}
+.admin-table{width:100%;border-collapse:collapse;font-size:11px}
+.admin-table th{text-align:left;padding:8px 10px;font-size:9px;font-weight:700;color:#aaa;text-transform:uppercase;letter-spacing:0.5px;background:#fafaf8;border-bottom:1px solid #f0f0ec;white-space:nowrap}
+.admin-table td{padding:8px 10px;border-bottom:1px solid #f8f8f6;color:#1a1a1a;vertical-align:middle;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100px}
 .admin-table tr:last-child td{border-bottom:none}
 .admin-table tr:hover td{background:#fafaf8}
 .room-pill{display:inline-flex;padding:3px 9px;border-radius:100px;font-size:10px;font-weight:700}
@@ -176,8 +170,8 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#f5f5f0;color:#1a1a1a
 
 <div class="header">
   <div class="header-left">
-    <div class="header-title">Tempahan Bilik</div>
-    <div class="header-sub">Sistem tempahan bilik mesyuarat & dewan</div>
+    <div class="header-title">eTempah JKR Perlis</div>
+    <div class="header-sub">Sistem Pengurusan Tempahan Bilik Mesyuarat & Dewan</div>
   </div>
   <button class="header-admin-btn" onclick="showPage('admin-login')">
     Admin
@@ -246,29 +240,13 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#f5f5f0;color:#1a1a1a
         <div class="ff"><label class="fl">Jawatan</label><input type="text" class="fi" id="f-jawatan" placeholder="cth. Pegawai Tadbir, Jurutera" disabled/></div>
         <div class="ff"><label class="fl">No. Telefon</label><input type="tel" class="fi" id="f-tel" placeholder="012-345 6789" disabled/></div>
         <div class="ff"><label class="fl">Tujuan Tempahan</label><input type="text" class="fi" id="f-tujuan" placeholder="cth. Mesyuarat, Taklimat" disabled/></div>
-        <div class="ff" id="platform-wrap" style="opacity:0.4;pointer-events:none">
-          <label class="fl">Platform</label>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:2px">
-            <label class="platform-item" id="plat-fizikal">
-              <input type="radio" name="platform" value="Fizikal" class="platform-radio" disabled/>
-              <span class="platform-icon"></span>
-              <span class="platform-label">Fizikal</span>
-            </label>
-            <label class="platform-item" id="plat-online">
-              <input type="radio" name="platform" value="Online" class="platform-radio" disabled/>
-              <span class="platform-icon"></span>
-              <span class="platform-label">Online</span>
-            </label>
-          </div>
-        </div>
         <div class="ff" id="ict-wrap" style="opacity:0.4;pointer-events:none">
           <label class="fl">Peralatan ICT</label>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:2px" id="ict-grid">
-            <label class="ict-item"><input type="checkbox" class="ict-cb" value="Laptop" disabled/> Laptop</label>
+            <label class="ict-item"><input type="checkbox" class="ict-cb" value="Komputer Riba" disabled/> Komputer Riba</label>
             <label class="ict-item"><input type="checkbox" class="ict-cb" value="Projektor" disabled/> Projektor</label>
-            <label class="ict-item"><input type="checkbox" class="ict-cb" value="Pembesar Suara" disabled/> Pembesar Suara</label>
-            <label class="ict-item"><input type="checkbox" class="ict-cb" value="Kamera" disabled/> Kamera</label>
-            <label class="ict-item"><input type="checkbox" class="ict-cb" value="Skrin Tayangan" disabled/> Skrin Tayangan</label>
+            <label class="ict-item"><input type="checkbox" class="ict-cb" value="Paparan Skrin" disabled/> Paparan Skrin</label>
+            <label class="ict-item"><input type="checkbox" class="ict-cb" value="Google Meet" disabled/> Google Meet</label>
           </div>
         </div>
         <div class="ff"><label class="fl">Catatan</label><textarea class="fi" id="f-catatan" placeholder="Sebarang catatan tambahan..." disabled style="resize:vertical;min-height:70px;line-height:1.5"></textarea></div>
@@ -318,7 +296,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#f5f5f0;color:#1a1a1a
   <div class="admin-topbar">
     <div>
       <div class="admin-title">Panel Admin</div>
-      <div style="font-size:12px;color:#aaa;margin-top:2px">Log masuk sebagai: <strong id="admin-user-label"></strong></div>
+      <div style="font-size:12px;color:#aaa;margin-top:2px">eTempah JKR Perlis · Log masuk sebagai: <strong id="admin-user-label"></strong></div>
     </div>
     <button class="admin-logout" onclick="doLogout()">Log keluar</button>
   </div>
@@ -351,7 +329,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#f5f5f0;color:#1a1a1a
         <thead>
           <tr>
             <th>Tarikh</th><th>Bilik</th><th>Masa</th>
-            <th>Nama</th><th>Bahagian</th><th>Jawatan</th><th>Telefon</th><th>Tujuan</th><th>Platform</th><th>Peralatan ICT</th><th>Catatan</th><th></th>
+            <th>Nama</th><th>Bahagian</th><th>Jawatan</th><th>Telefon</th><th>Tujuan</th><th>Peralatan ICT</th><th>Catatan</th><th></th>
           </tr>
         </thead>
         <tbody id="admin-tbody"></tbody>
@@ -367,7 +345,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#f5f5f0;color:#1a1a1a
 // ============================================================
 // TUKAR URL INI
 // ============================================================
-const API_URL = 'https://script.google.com/macros/s/AKfycbxzukbnbr5UUiyD5xXhvYpdGZeyypwCfAlhzbEQhMmjIChOBKmR-hkloYsXnPVYRtrm/exec';
+const API_URL = 'MASUKKAN_URL_APPS_SCRIPT_DI_SINI';
 
 const ROOMS = [
   { id:'BMR', name:'Bilik Mesyuarat Rafflesia', type:'Bilik mesyuarat', c:'#7C3AED', bg:'#EDE9FE', tempahan:'Awis', telT:'+60 17-477 6609', pic:'Awis', telP:'+60 17-477 6609' },
@@ -556,8 +534,6 @@ async function updateFormForRange(){
   document.getElementById('sub-btn').disabled=false;
   document.getElementById('ict-wrap').style.cssText='opacity:1;pointer-events:auto';
   document.querySelectorAll('.ict-cb').forEach(cb=>cb.disabled=false);
-  document.getElementById('platform-wrap').style.cssText='opacity:1;pointer-events:auto';
-  document.querySelectorAll('.platform-radio').forEach(r=>r.disabled=false);
 
   try{
     const res=await fetch(`${API_URL}?action=dayBookings&date=${dateStart}`);
@@ -586,7 +562,6 @@ async function handleSubmit(){
   const tujuan=document.getElementById('f-tujuan').value.trim();
   const ict=[...document.querySelectorAll('.ict-cb:checked')].map(cb=>cb.value).join(', ');
   const catatan=document.getElementById('f-catatan').value.trim();
-  const platform=document.querySelector('.platform-radio:checked')?.value||'';
 
   if(!dateStart)return toast('Sila pilih tarikh dahulu',1);
   if(!dari)return toast('Sila masukkan masa mula',1);
@@ -598,7 +573,6 @@ async function handleSubmit(){
   if(!tel)return toast('Sila masukkan no. telefon',1);
   if(tel.replace(/\D/g,'').length<7)return toast('No. telefon tidak sah',1);
   if(!tujuan)return toast('Sila masukkan tujuan',1);
-  if(!platform)return toast('Sila pilih platform (Fizikal atau Online)',1);
 
   // Build tarikh string — range or single
   const tarikhStr=dateEnd?`${dateStart} hingga ${dateEnd}`:dateStart;
@@ -610,7 +584,7 @@ async function handleSubmit(){
     await fetch(API_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},
       body:JSON.stringify({action:'create',booking:{
         tarikh:tarikhStr, bilik:currentRoom.id, slot:`${dari}-${hingga}`,
-        nama, jabatan, jawatan, telefon:tel, tujuan, platform, peralatan:ict, catatan,
+        nama, jabatan, jawatan, telefon:tel, tujuan, peralatan:ict, catatan,
       }})});
 
     // Build success display
@@ -624,7 +598,7 @@ async function handleSubmit(){
       ['Bilik',currentRoom.name],
       ['Tarikh',tarikhDisplay],
       ['Masa',`${dari} – ${hingga}`],
-      ['Nama',nama],['Bahagian',jabatan],['Jawatan',jawatan],['Telefon',tel],['Tujuan',tujuan],['Platform',platform],
+      ['Nama',nama],['Bahagian',jabatan],['Jawatan',jawatan],['Telefon',tel],['Tujuan',tujuan],
       ...(ict?[['Peralatan ICT',ict]]:[]),
       ...(catatan?[['Catatan',catatan]]:[]),
     ].map(([l,v])=>`<div class="suc-row"><span class="suc-lbl">${l}</span><span class="suc-val">${v}</span></div>`).join('');
@@ -641,9 +615,7 @@ function resetForm(){
   dateStart=null;dateEnd=null;dayBookings=[];
   ['f-dari','f-hingga','f-nama','f-jabatan','f-jawatan','f-tel','f-tujuan','f-catatan'].forEach(id=>{const el=document.getElementById(id);if(el){el.value='';el.disabled=true;}});
   document.querySelectorAll('.ict-cb').forEach(cb=>{cb.checked=false;cb.disabled=true;});
-  document.querySelectorAll('.platform-radio').forEach(r=>{r.checked=false;r.disabled=true;});
   document.getElementById('ict-wrap').style.cssText='opacity:0.4;pointer-events:none';
-  document.getElementById('platform-wrap').style.cssText='opacity:0.4;pointer-events:none';
   document.getElementById('sub-btn').disabled=true;
   document.getElementById('date-ph').style.display='block';
   document.getElementById('date-ind').style.display='none';
@@ -758,13 +730,12 @@ function renderTable(data){
       <td style="color:#888">${b.jabatan||'-'}</td>
       <td style="color:#888">${b.jawatan||'-'}</td>
       <td><a href="tel:${(b.telefon||'').replace(/\D/g,'')}" style="color:#666;text-decoration:none">${b.telefon||'-'}</a></td>
-      <td style="color:#888;max-width:120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${b.tujuan||'-'}</td>
-      <td><span style="padding:2px 8px;border-radius:100px;font-size:10px;font-weight:700;background:${b.platform==='Online'?'#dbeafe':'#dcfce7'};color:${b.platform==='Online'?'#1d4ed8':'#15803d'}">${b.platform||'-'}</span></td>
-      <td style="color:#666;max-width:130px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${b.peralatan||'-'}</td>
-      <td style="color:#aaa;max-width:120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${b.catatan||'-'}</td>
+      <td style="color:#888">${b.tujuan||'-'}</td>
+      <td style="color:#666">${b.peralatan||'-'}</td>
+      <td style="color:#aaa">${b.catatan||'-'}</td>
       <td>
         <button onclick="deleteBooking('${safeId}','${b.nama||''}')"
-          style="background:#fff0f0;border:1.5px solid #fecaca;color:#ef4444;border-radius:8px;padding:5px 10px;font-size:11px;font-weight:700;cursor:pointer;white-space:nowrap;font-family:inherit;transition:all 0.15s"
+          style="background:#fff0f0;border:1.5px solid #fecaca;color:#ef4444;border-radius:6px;padding:4px 8px;font-size:10px;font-weight:700;cursor:pointer;white-space:nowrap;font-family:inherit;transition:all 0.15s"
           onmouseover="this.style.background='#fee2e2'" onmouseout="this.style.background='#fff0f0'">
           Padam
         </button>
