@@ -7,7 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Plus Jakarta Sans',sans-serif;background:#f5f5f0;color:#1a1a1a;min-height:100vh}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:#f5f5f0;color:#1a1a1a;min-height:100vh;font-size:15px}
 .header{background:#fff;border-bottom:1px solid #e8e8e4;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
 .header-left{display:flex;flex-direction:column}
 .header-title{font-size:17px;font-weight:700;color:#1a1a1a;letter-spacing:-0.3px}
@@ -17,21 +17,21 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#f5f5f0;color:#1a1a1a
 .page{display:none;padding:20px 24px;max-width:960px;margin:0 auto;animation:fadeIn 0.2s ease}
 .page.active{display:block}
 @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
-.section-label{font-size:13px;font-weight:700;color:#1a1a1a;margin-bottom:3px}
-.section-desc{font-size:12px;color:#aaa;margin-bottom:18px}
+.section-label{font-size:16px;font-weight:700;color:#1a1a1a;margin-bottom:3px}
+.section-desc{font-size:14px;color:#aaa;margin-bottom:18px}
 
 /* ── ROOMS ── */
 .rooms-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
 .room-card{background:#fff;border:1.5px solid #e8e8e4;border-radius:18px;padding:18px;cursor:pointer;transition:all 0.2s;position:relative;overflow:hidden;text-align:left;width:100%}
 .room-card:hover{border-color:var(--c);box-shadow:0 6px 24px rgba(0,0,0,0.07);transform:translateY(-2px)}
 .room-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--c)}
-.room-badge{display:inline-flex;padding:3px 10px;border-radius:100px;font-size:11px;font-weight:700;margin-bottom:10px;background:var(--bg);color:var(--c)}
-.room-name{font-size:14px;font-weight:700;color:#1a1a1a;margin-bottom:3px;line-height:1.3}
-.room-type{font-size:10px;color:#bbb;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.5px;font-weight:600}
-.contact-block{background:#fafaf8;border-radius:9px;padding:8px 10px;margin-bottom:5px}
-.contact-role{font-size:9px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:2px}
-.contact-name{font-size:12px;font-weight:600;color:#1a1a1a}
-.contact-tel{font-size:11px;color:#888;margin-top:1px}
+.room-badge{display:inline-flex;padding:4px 12px;border-radius:100px;font-size:13px;font-weight:700;margin-bottom:10px;background:var(--bg);color:var(--c)}
+.room-name{font-size:16px;font-weight:700;color:#1a1a1a;margin-bottom:3px;line-height:1.3}
+.room-type{font-size:12px;color:#bbb;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.5px;font-weight:600}
+.contact-block{background:#fafaf8;border-radius:9px;padding:10px 12px;margin-bottom:5px}
+.contact-role{font-size:10px;font-weight:700;color:#ccc;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:2px}
+.contact-name{font-size:14px;font-weight:600;color:#1a1a1a}
+.contact-tel{font-size:13px;color:#888;margin-top:1px}
 .room-cta{margin-top:10px;display:flex;align-items:center;justify-content:space-between}
 .room-cta-text{font-size:11px;font-weight:600;color:var(--c);opacity:0.75}
 .room-cta-arr{width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--bg);color:var(--c);font-size:13px;transition:transform 0.2s}
@@ -42,8 +42,8 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#f5f5f0;color:#1a1a1a
 .back-btn:hover{color:#1a1a1a}
 .booking-room-bar{display:flex;align-items:center;gap:12px;margin-bottom:20px;padding:14px 16px;background:#fff;border-radius:14px;border:1.5px solid #e8e8e4}
 .booking-room-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;flex-shrink:0}
-.booking-room-name{font-size:15px;font-weight:700;color:#1a1a1a}
-.booking-room-sub{font-size:11px;color:#aaa}
+.booking-room-name{font-size:17px;font-weight:700;color:#1a1a1a}
+.booking-room-sub{font-size:13px;color:#aaa}
 .booking-layout{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 @media(max-width:620px){.booking-layout{grid-template-columns:1fr}}
 
@@ -89,16 +89,16 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#f5f5f0;color:#1a1a1a
 .time-inp:focus{border-color:var(--c)}
 .time-inp:disabled{background:#fafaf8;color:#ccc;cursor:not-allowed}
 .ff{margin-bottom:10px}
-.fl{font-size:10px;font-weight:700;color:#aaa;margin-bottom:4px;display:block;text-transform:uppercase;letter-spacing:0.3px}
-.fi{width:100%;border:1.5px solid #e8e8e4;border-radius:10px;padding:9px 12px;font-size:13px;font-family:inherit;color:#1a1a1a;background:#fff;outline:none;transition:border-color 0.15s}
+.fl{font-size:13px;font-weight:700;color:#666;margin-bottom:5px;display:block;text-transform:uppercase;letter-spacing:0.3px}
+.fi{width:100%;border:1.5px solid #e8e8e4;border-radius:10px;padding:11px 14px;font-size:14px;font-family:inherit;color:#1a1a1a;background:#fff;outline:none;transition:border-color 0.15s}
 .fi:focus{border-color:var(--c)}
 .fi:disabled{background:#fafaf8;color:#ccc;cursor:not-allowed}
 .fi::placeholder{color:#ddd}
-.ict-item{display:flex;align-items:center;gap:7px;padding:8px 10px;border:1.5px solid #e8e8e4;border-radius:9px;font-size:12px;font-weight:500;color:#444;cursor:pointer;transition:all 0.15s;background:#fff}
+.ict-item{display:flex;align-items:center;gap:7px;padding:10px 12px;border:1.5px solid #e8e8e4;border-radius:9px;font-size:14px;font-weight:500;color:#444;cursor:pointer;transition:all 0.15s;background:#fff}
 .ict-item:has(.ict-cb:checked){border-color:var(--c);background:var(--bg);color:var(--c);font-weight:600}
 .ict-item:hover:has(.ict-cb:not(:disabled)){border-color:#bbb}
 .ict-cb{width:14px;height:14px;cursor:pointer;accent-color:var(--c)}
-.sub-btn{width:100%;padding:12px;border-radius:12px;border:none;font-size:13px;font-weight:700;font-family:inherit;cursor:pointer;color:#fff;background:var(--c);transition:all 0.2s;margin-top:4px}
+.sub-btn{width:100%;padding:14px;border-radius:12px;border:none;font-size:15px;font-weight:700;font-family:inherit;cursor:pointer;color:#fff;background:var(--c);transition:all 0.2s;margin-top:4px}
 .sub-btn:hover:not(:disabled){opacity:0.87;transform:translateY(-1px)}
 .sub-btn:disabled{opacity:0.35;cursor:not-allowed;transform:none}
 
@@ -236,8 +236,48 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#f5f5f0;color:#1a1a1a
           <div class="time-col"><label>Hingga</label><input type="time" class="time-inp" id="f-hingga" disabled/></div>
         </div>
         <div class="ff"><label class="fl">Nama Penuh</label><input type="text" class="fi" id="f-nama" placeholder="Nama penuh anda" disabled/></div>
-        <div class="ff"><label class="fl">Bahagian</label><input type="text" class="fi" id="f-jabatan" placeholder="cth. Bahagian Pentadbiran, ICT" disabled/></div>
-        <div class="ff"><label class="fl">Jawatan</label><input type="text" class="fi" id="f-jawatan" placeholder="cth. Pegawai Tadbir, Jurutera" disabled/></div>
+        <div class="ff"><label class="fl">Bahagian</label>
+          <select class="fi" id="f-jabatan" disabled>
+            <option value="">-- Pilih Bahagian --</option>
+            <option>Bahagian Pengurusan Korporat</option>
+            <option>Bahagian Jalan</option>
+            <option>Bahagian Arkitek</option>
+            <option>Bahagian Rekabentuk Awam dan Struktur</option>
+            <option>Bahagian Kontrak dan Ukur Bahan</option>
+            <option>Cawangan Pengurusan Aset Bersepadu</option>
+            <option>Cawangan Kejuruteraan Elektrik</option>
+            <option>Bahagian Mekanikal</option>
+            <option>Bahagian Bangunan</option>
+            <option>Unit Pengurusan Projek Persekutuan Negeri</option>
+          </select>
+        </div>
+        <div class="ff"><label class="fl">Jawatan</label>
+          <select class="fi" id="f-jawatan" disabled>
+            <option value="">-- Pilih Jawatan --</option>
+            <option>Arkitek</option>
+            <option>Jurutera Awam</option>
+            <option>Jurutera Elektrik</option>
+            <option>Jurutera Mekanikal</option>
+            <option>Juruukur Bahan</option>
+            <option>Juruukur Bangunan</option>
+            <option>Pelukis Pelan</option>
+            <option>Pemandu Kenderaan</option>
+            <option>Pembantu Khidmat Am</option>
+            <option>Pembantu Kemahiran</option>
+            <option>Pembantu Operasi</option>
+            <option>Pembantu Tadbir (Kewangan)</option>
+            <option>Pembantu Tadbir (P/O)</option>
+            <option>Penolong Akauntan</option>
+            <option>Penolong Jurutera</option>
+            <option>Penolong Jurutera (Elektrik)</option>
+            <option>Penolong Jurutera (Mekanikal)</option>
+            <option>Penolong Juruukur Bahan</option>
+            <option>Penolong Pegawai Senibina</option>
+            <option>Penolong Pegawai Tadbir</option>
+            <option>Penolong Pegawai Teknologi Maklumat</option>
+            <option>Setiausaha Pejabat</option>
+          </select>
+        </div>
         <div class="ff"><label class="fl">No. Telefon</label><input type="tel" class="fi" id="f-tel" placeholder="012-345 6789" disabled/></div>
         <div class="ff"><label class="fl">Tujuan Tempahan</label><input type="text" class="fi" id="f-tujuan" placeholder="cth. Mesyuarat, Taklimat" disabled/></div>
         <div class="ff" id="ict-wrap" style="opacity:0.4;pointer-events:none">
@@ -246,7 +286,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;background:#f5f5f0;color:#1a1a1a
             <label class="ict-item"><input type="checkbox" class="ict-cb" value="Komputer Riba" disabled/> Komputer Riba</label>
             <label class="ict-item"><input type="checkbox" class="ict-cb" value="Projektor" disabled/> Projektor</label>
             <label class="ict-item"><input type="checkbox" class="ict-cb" value="Paparan Skrin" disabled/> Paparan Skrin</label>
-            <label class="ict-item"><input type="checkbox" class="ict-cb" value="Google Meet" disabled/> Google Meet</label>
+            <label class="ict-item"><input type="checkbox" class="ict-cb" value="Mesyuarat Dalam Talian" disabled/> Mesyuarat Dalam Talian</label>
           </div>
         </div>
         <div class="ff"><label class="fl">Catatan</label><textarea class="fi" id="f-catatan" placeholder="Sebarang catatan tambahan..." disabled style="resize:vertical;min-height:70px;line-height:1.5"></textarea></div>
@@ -568,8 +608,8 @@ async function handleSubmit(){
   if(!hingga)return toast('Sila masukkan masa tamat',1);
   if(hingga<=dari)return toast('Masa tamat mesti selepas masa mula',1);
   if(!nama)return toast('Sila masukkan nama',1);
-  if(!jabatan)return toast('Sila masukkan bahagian',1);
-  if(!jawatan)return toast('Sila masukkan jawatan',1);
+  if(!jabatan||jabatan==='-- Pilih Bahagian --')return toast('Sila pilih bahagian',1);
+  if(!jawatan||jawatan==='-- Pilih Jawatan --')return toast('Sila pilih jawatan',1);
   if(!tel)return toast('Sila masukkan no. telefon',1);
   if(tel.replace(/\D/g,'').length<7)return toast('No. telefon tidak sah',1);
   if(!tujuan)return toast('Sila masukkan tujuan',1);
@@ -613,7 +653,13 @@ async function handleSubmit(){
 function bookAgain(){dateStart=null;dateEnd=null;resetForm();renderCal();showPage('booking');}
 function resetForm(){
   dateStart=null;dateEnd=null;dayBookings=[];
-  ['f-dari','f-hingga','f-nama','f-jabatan','f-jawatan','f-tel','f-tujuan','f-catatan'].forEach(id=>{const el=document.getElementById(id);if(el){el.value='';el.disabled=true;}});
+  ['f-dari','f-hingga','f-nama','f-jabatan','f-jawatan','f-tel','f-tujuan','f-catatan'].forEach(id=>{
+    const el=document.getElementById(id);
+    if(el){
+      el.value = el.tagName === 'SELECT' ? '' : '';
+      el.disabled=true;
+    }
+  });
   document.querySelectorAll('.ict-cb').forEach(cb=>{cb.checked=false;cb.disabled=true;});
   document.getElementById('ict-wrap').style.cssText='opacity:0.4;pointer-events:none';
   document.getElementById('sub-btn').disabled=true;
